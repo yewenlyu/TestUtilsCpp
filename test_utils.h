@@ -7,10 +7,10 @@
 namespace test_utils
 {
     template<class T>
-    std::vector<T> str_to_vector(std::string);
+    std::vector<T> str_to_vector(std::string, char);
 
     template<class T>
-    std::vector<std::vector<T>>str_to_vector_2D(std::string);
+    std::vector<std::vector<T>>str_to_vector_2D(std::string, char);
 
     template<class T>
     std::string vector_to_str(std::vector<T>);
