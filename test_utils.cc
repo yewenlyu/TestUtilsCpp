@@ -43,13 +43,29 @@ namespace test_utils
             {
                 output_vector.push_back(input_string[pos + 1]);
 
-                // find every other quote 
                 pos = input_string.find(quote, pos + 1);
-                pos = input_string.find(quote, pos + 1);
+                pos = input_string.find(quote, pos + 1); // find every other quote 
             }
         }
 
         return output_vector;
+    }
+
+    template<class T>
+    std::string vector_to_str(std::vector<T> input_vector)
+    {
+        std::string output_str;
+
+        output_str.append("[");
+        for (size_t i = 0; i < input_vector.size(); ++i)
+        {
+            output_str.append(std::to_string(input_vector.at(i)));
+            if (i != input_vector.size() - 1)
+                output_str.append(", ");
+        }
+        output_str.append("]");
+
+        return output_str;
     }
 
 } // namespace test_utils
